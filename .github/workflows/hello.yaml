@@ -1,26 +1,20 @@
-name: Hello Workflow
+name: Hello world
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  workflow dispatch:
+      - master
 
 jobs:
-  hello:
+  build:
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: hello world
-        run: echo "Hello world"
-        shell: bash
-  goodbye:
-    runs-on: windows-latest
-    steps:
-      - name: goodbye world
-        run: echo "Goodbye world"
-        shell: bash
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Say Hello
+        run: echo "Hello world!"
+
+
         
