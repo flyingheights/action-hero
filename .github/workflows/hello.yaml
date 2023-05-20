@@ -15,6 +15,6 @@ jobs:
 
       - name: Say Hello
         run: echo "Hello world!"
-
+              workflow-dispatch:
 
         
