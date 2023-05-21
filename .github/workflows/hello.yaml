@@ -1,4 +1,4 @@
-name: Hello world
+name: This is an indication that something has been executed or changed
 
 on:
   push:
@@ -11,10 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-      - uses:  phwes/simple_hello_world@v1
+        uses: actions/checkout@v2
 
-      - name: Say Hello
-        run: echo "Hello world!"
-              workflow-dispatch:
-
-        
+      - name: Say confirmation
+        run: echo "Something has been run/executed/pushed"
